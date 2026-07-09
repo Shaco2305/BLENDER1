@@ -1,0 +1,127 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:
+    linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+    url(../img/fondo2.jpg);
+
+    background-size:cover;
+    background-position:center;
+    font-family:"Century Gothic";
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+.contenido{
+    width:70%;
+    padding:40px;
+}
+
+h1{
+    text-align:center;
+    font-size:60px;
+    margin-top:30px;
+    margin-bottom:40px;
+    color:rgba(0,102,204,0);
+    animation:titulo 2s forwards;
+}
+
+@keyframes titulo{
+
+from{
+    color:rgba(0,102,204,0);
+}
+
+to{
+    color:#0066cc;
+}
+
+}
+
+.video{
+    display:block;
+    margin:auto;
+    width:90%;
+    max-width:900px;
+    border:5px solid white;
+    border-radius:10px;
+    box-shadow:0 0 25px rgba(255,255,255,.7);
+
+    opacity:0;
+    animation:mostrarVideo 2s 1.5s forwards;
+}
+
+@keyframes mostrarVideo{
+
+from{
+    opacity:0;
+    transform:translateY(30px);
+}
+
+to{
+    opacity:1;
+    transform:translateY(0);
+}
+
+}
+
+#panel{
+    width:300px;
+    height:650px;
+    background:rgba(30,30,30,.92);
+
+    position:fixed;
+    right:35px;
+    top:35px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:40px;
+
+    box-shadow:0 0 35px black;
+}
+
+/* Imagen Superior */
+
+.imagen{
+    width:210px;
+    height:210px;
+    object-fit:cover;
+    border:5px solid white;
+    box-shadow:0 0 25px white;
+    animation:flotar 2s infinite alternate;
+}
+
+/* Imagen Inferior */
+
+.imagen2{
+    width:210px;
+    height:210px;
+    object-fit:cover;
+    border:5px solid white;
+    box-shadow:0 0 25px #5c5cff;
+    transition:.3s;
+}
+
+.imagen2:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 35px #5c5cff;
+}
+
+@keyframes flotar{
+
+from{
+    transform:translateY(0);
+}
+
+to{
+    transform:translateY(-10px);
+}
+
+}
